@@ -1,29 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lugx Gaming - Login</title>
-    <link rel="stylesheet" href="assets/css/templatemo-lugx-gaming.css">
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Lugx Gaming Login Page Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #ffffff;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
 
+        .header-area {
+            background-color: rgba(22, 33, 62, 0.8);
+            padding: 20px 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+
+        .main-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4ecca3;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .nav {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav li {
+            margin-left: 20px;
+        }
+
+        .nav li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav li a:hover, .nav li a.active {
+            color: #4ecca3;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .line-dec {
+            width: 60px;
+            height: 3px;
+            background-color: #4ecca3;
+            margin: 0 auto 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #4ecca3;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 0;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(78, 204, 163, 0.2);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        /* da sua */
+
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 5px;
+            color: #ffffff;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .main-button {
+            background-color: #4ecca3;
+            color: #ffffff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        .main-button:hover {
+            background-color: #45b393;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .header-area {
+                padding: 10px 0;
+            }
+
+            .main-nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav {
+                margin-top: 20px;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav li {
+                margin: 10px 0;
+            }
+
+            form {
+                padding: 20px;
+            }
+        }
+
+        /* Gaming-inspired decorative elements */
+        .container::before,
+        .container::after {
+            content: "";
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%234ecca3"><path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 9 19.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>');
+            background-repeat: no-repeat;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        .container::before {
+            top: 20px;
+            left: 20px;
+        }
+
+        .container::after {
+            bottom: 20px;
+            right: 20px;
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
 <body>
-    <header class="header-area header-sticky">
+    <header class="header-area">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <nav class="main-nav">
-                        <a href="index.html" class="logo">LUGX GAMING</a>
+                        <a href="index.html" class="logo">LuGx</a>
                         <ul class="nav">
-                            <li class="scroll-to-section"><a href="index.html" class="active">Home</a></li>
-                            <li class="scroll-to-section"><a href="shop.html">Shop</a></li>
-                            <li class="scroll-to-section"><a href="contact.html">Contact</a></li>
-                            <li class="scroll-to-section"><a href="login.html">Login</a></li>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="login.html" class="active">Login</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -42,13 +220,13 @@
             <div class="col-12">
                 <form action="#" method="post">
                     <div class="row">
-                        <div class="col-lg-12">
+                        <div class="col-12">
                             <input type="text" name="username" class="form-control" placeholder="Username" required>
                         </div>
-                        <div class="col-lg-12">
+                        <div class="col-12">
                             <input type="password" name="password" class="form-control" placeholder="Password" required>
                         </div>
-                        <div class="col-lg-12">
+                        <div class="col-12">
                             <button type="submit" class="main-button">Login</button>
                         </div>
                     </div>
@@ -56,14 +234,5 @@
             </div>
         </div>
     </div>
-
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/isotope.min.js"></script>
-    <script src="assets/js/owl-carousel.js"></script>
-    <script src="assets/js/counter.js"></script>
-    <script src="assets/js/custom.js"></script>
-
 </body>
-
 </html>
