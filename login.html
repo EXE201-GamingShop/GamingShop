@@ -1,238 +1,184 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lugx Gaming - Login</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Đăng nhập - LUGX Gaming</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-lugx-gaming.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
     <style>
-        /* Lugx Gaming Login Page Styles */
-        body {
-            font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: #ffffff;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
+        .login-form {
+            background-color: #aed9ef; /* Keep this for the background color */
+            padding: 30px;
+            border-radius: 23px;
+            margin-top: 30px;
         }
-
-        .header-area {
-            background-color: rgba(22, 33, 62, 0.8);
-            padding: 20px 0;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .col-12 {
+        .login-form input {
             width: 100%;
-        }
-
-        .main-nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #4ecca3;
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .nav {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
-
-        .nav li {
-            margin-left: 20px;
-        }
-
-        .nav li a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav li a:hover, .nav li a.active {
-            color: #4ecca3;
-        }
-
-        .section-heading {
-            text-align: center;
-            margin: 40px 0;
-        }
-
-        .line-dec {
-            width: 60px;
-            height: 3px;
-            background-color: #4ecca3;
-            margin: 0 auto 20px;
-        }
-
-        h1 {
-            font-size: 36px;
-            color: #4ecca3;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin: 0;
-        }
-
-        form {
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(78, 204, 163, 0.2);
-            max-width: 400px;
-            margin: 0 auto;
-        }
-
-        /* da sua */
-
-        .form-control {
-            width: 100%;
-            padding: 15px;
+            height: 46px;
+            background-color: transparent;
+            border: 1px solid #4b4e4f; /* Keep the border color or change it if desired */
+            border-radius: 23px;
+            color: #000; /* Change text color to black for better contrast */
+            font-size: 14px;
+            padding: 0px 15px;
             margin-bottom: 20px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border: none;
-            border-radius: 5px;
-            color: #ffffff;
-            font-size: 16px;
-            box-sizing: border-box;
         }
-
-        .form-control::placeholder {
-            color: rgba(255, 255, 255, 0.6);
+        .login-form input:focus {
+            outline: none;
+            border-color: #007bff; /* Change to a blue color on focus */
         }
-
-        .main-button {
-            background-color: #4ecca3;
-            color: #ffffff;
+        .login-form button.orange-button {
+            font-size: 14px;
+            color: #fff; /* Keep text color white */
+            background-color: #007bff; /* Change button background to blue */
+            padding: 12px 30px;
+            display: inline-block;
+            border-radius: 25px;
+            font-weight: 400;
+            text-transform: capitalize;
+            letter-spacing: 0.5px;
+            transition: all .3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .login-form button.orange-button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            color: #fff; /* Keep text color white */
+        }
+        /* Adjust padding between header and footer */
+        body {
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove padding from body */
+        }
+        .section {
+            padding: 15px 0; /* Reduced padding above and below the main section */
+        }
+        .google-button {
+            background-color: #4285F4;
+            color: white;
             border: none;
-            padding: 15px 30px;
-            font-size: 18px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-radius: 5px;
+            padding: 10px 20px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             width: 100%;
+            margin-top: 10px;
         }
-
-        .main-button:hover {
-            background-color: #45b393;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .header-area {
-                padding: 10px 0;
-            }
-
-            .main-nav {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .nav {
-                margin-top: 20px;
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .nav li {
-                margin: 10px 0;
-            }
-
-            form {
-                padding: 20px;
-            }
-        }
-
-        /* Gaming-inspired decorative elements */
-        .container::before,
-        .container::after {
-            content: "";
-            position: fixed;
-            width: 50px;
-            height: 50px;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%234ecca3"><path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 9 19.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>');
-            background-repeat: no-repeat;
-            opacity: 0.1;
-            z-index: -1;
-        }
-
-        .container::before {
-            top: 20px;
-            left: 20px;
-        }
-
-        .container::after {
-            bottom: 20px;
-            right: 20px;
-            transform: rotate(180deg);
+        .google-icon {
+            width: 18px;
+            height: 18px;
+            margin-right: 10px;
         }
     </style>
+    
+    
 </head>
 <body>
-    <header class="header-area">
+    <div id="js-preloader" class="js-preloader">
+        <div class="preloader-inner">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <header class="header-area header-sticky">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <nav class="main-nav">
-                        <a href="index.html" class="logo">LuGx Gaming</a>
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/logo.png" alt="" style="width: 158px;">
+                        </a>
                         <ul class="nav">
                             <li><a href="index.html">Trang Chủ</a></li>
                             <li><a href="shop.html">Cửa hàng</a></li>
+                            <li><a href="product-details.html">Chi tiết sản phẩm</a></li>
                             <li><a href="contact.html">Liên hệ</a></li>
                             <li><a href="login.html" class="active">Đăng nhập</a></li>
-                        </ul>
+                        </ul>   
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
                     </nav>
                 </div>
             </div>
         </div>
     </header>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="section-heading">
-                    <div class="line-dec"></div>
-                    <h1>Đăng nhập</h1>
+    <div class="page-heading header-text">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Đăng nhập</h3>
+                    <span class="breadcrumb"><a href="index.html">Trang chủ</a> > Đăng nhập</span>
                 </div>
-            </div>
-            <div class="col-12">
-                <form action="#" method="post">
-                    <div class="row">
-                        <div class="col-12">
-                            <input type="text" name="username" class="form-control" placeholder="tài khoản của bạn..." required>
-                        </div>
-                        <div class="col-12">
-                            <input type="password" name="password" class="form-control" placeholder="mật khẩu" required>
-                        </div>
-                        <div class="col-12">
-                            <button type="submit" class="main-button">Đăng nhập</button>
-                        </div>
-                    </div>
-                </form>
             </div>
         </div>
     </div>
+
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <form id="login" action="#" method="post" class="login-form">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <fieldset>
+                                    <input type="text" name="username" id="username" placeholder="Tên đăng nhập" autocomplete="on" required>
+                                </fieldset>
+                            </div>
+                            <div class="col-lg-12">
+                                <fieldset>
+                                    <input type="password" name="password" id="password" placeholder="Mật khẩu" autocomplete="off" required>
+                                </fieldset>
+                            </div>
+                            <div class="col-lg-12" style="padding-bottom: 10px;">
+                                Chưa có tài khoản? <a href="register.html">Bấm vào đây</a>
+                            </div>
+                            <div class="col-lg-12">
+                                <fieldset>
+                                    <button type="submit" id="form-submit" class="orange-button">Đăng nhập</button>
+                                </fieldset>
+                            </div>
+                            <div class="col-lg-12">
+                                
+                                    <button class="google-button">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/480px-Google_%22G%22_logo.svg.png" alt="Google logo" class="google-icon">
+                                        Đăng nhập với Google
+                                    </button>
+                                
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="col-lg-12">
+                <p>Copyright © 2048 LUGX Gaming Company. All rights reserved. &nbsp;&nbsp; <a rel="nofollow" href="https://templatemo.com" target="_blank">Design: TemplateMo</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/counter.js"></script>
+    <script src="assets/js/custom.js"></script>
 </body>
 </html>
