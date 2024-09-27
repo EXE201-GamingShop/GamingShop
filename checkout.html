@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <title>Lugx Gaming - Check out</title>
+  <title>Lugx Gaming - Thanh toán</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -17,90 +16,113 @@
   <link rel="stylesheet" href="assets/css/templatemo-lugx-gaming.css">
   <link rel="stylesheet" href="assets/css/owl.css">
   <link rel="stylesheet" href="assets/css/animate.css">
-  <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <!--
-
-
-
-  TemplateMo 589 lugx gaming
-
-  https://templatemo.com/tm-589-lugx-gaming
-
-  -->
 </head>
 
 <body>
 
-<!-- ***** Preloader Start ***** -->
-<div id="js-preloader" class="js-preloader">
-  <div class="preloader-inner">
-    <span class="dot"></span>
-    <div class="dots">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </div>
-</div>
-<!-- ***** Preloader End ***** -->
-
-<!-- ***** Header Area Start ***** -->
-<header class="header-area header-sticky">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <nav class="main-nav">
-          <!-- ***** Logo Start ***** -->
-          <a href="index.html" class="logo">
-            <img src="assets/images/logo.png" alt="" style="width: 158px;">
-          </a>
-          <!-- ***** Logo End ***** -->
-          <!-- ***** Menu Start ***** -->
-          <ul class="nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="shop.html">Our Shop</a></li>
-            <li><a href="product-details.html" class="active">Product Details</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="#">Sign In</a></li>
-          </ul>
-          <a class='menu-trigger'>
-            <span>Menu</span>
-          </a>
-          <!-- ***** Menu End ***** -->
-        </nav>
-      </div>
-    </div>
-  </div>
-</header>
-<!-- ***** Header Area End ***** -->
-
-<div class="page-heading header-text">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <h3>Check Out</h3>
-      </div>
-    </div>
-  </div>
-</div>
-
-  <section class="checkout-page" style="margin-top: 50px">
+  <header class="header-area">
     <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="Lugx Gaming"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#lugxgame-navbar" aria-controls="lugxgame-navbar" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="lugxgame-navbar">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a href="index.html" class="nav-link">Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                  <a href="shop.html" class="nav-link">Cửa hàng</a>
+                </li>
+                <li class="nav-item active">
+                  <a href="checkout.html" class="nav-link">Thanh toán</a>
+                </li>
+                <li class="nav-item">
+                  <a href="contact.html" class="nav-link">Liên hệ</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="checkout-page">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="page-title">Thanh toán</h2>
+        </div>
+      </div>
       <div class="row">
         <div class="col-lg-8">
           <div class="checkout-form">
             <div class="row">
+              <div class="col-lg-6">
+                <h4>Chi tiết thanh toán</h4>
+                <form action="#">
+                  <div class="form-group">
+                    <label for="first-name">Tên *</label>
+                    <input type="text" class="form-control" id="first-name" aria-describedby="first-name" placeholder="Nhập tên của bạn">
+                  </div>
+                  <div class="form-group">
+                    <label for="last-name">Họ *</label>
+                    <input type="text" class="form-control" id="last-name" aria-describedby="last-name" placeholder="Nhập họ của bạn">
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Địa chỉ email *</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Nhập địa chỉ email của bạn">
+                  </div>
+                  <div class="form-group">
+                    <label for="phone">Số điện thoại *</label>
+                    <input type="text" class="form-control" id="phone" aria-describedby="phone" placeholder="Nhập số điện thoại của bạn">
+                  </div>
+                </form>
+              </div>
+              <div class="col-lg-6">
+                <h4>Phương thức thanh toán</h4>
+                <form action="#">
+                  <div class="form-group">
+                    <label for="payment-method">Phương thức thanh toán</label>
+                    <select class="form-control" id="payment-method">
+                      <option value="">Chọn phương thức thanh toán</option>
+                      <option value="paypal">Paypal</option>
+                      <option value="visa">Visa</option>
+                      <option value="mastercard">Mastercard</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="card-number">Số thẻ</label>
+                    <input type="text" class="form-control" id="card-number" aria-describedby="card-number" placeholder="Nhập số thẻ của bạn">
+                  </div>
+                  <div class="form-group">
+                    <label for="card-expire">Ngày hết hạn thẻ</label>
+                    <input type="text" class="form-control" id="card-expire" aria-describedby="card-expire" placeholder="MM/YY">
+                  </div>
+                  <div class="form-group">
+                    <label for="card-cvc">Mã CVC</label>
+                    <input type="text" class="form-control" id="card-cvc" aria-describedby="card-cvc" placeholder="Nhập mã CVC">
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="row">
               <div class="col-12">
-                <h4>Order Summary</h4>
-                <table class="table table-bordered" style="margin-top: 30px">
+                <h4 class="mt-4">Tóm tắt đơn hàng</h4>
+                <table class="table table-bordered">
                   <thead>
                     <tr>
-                      <th scope="col">Product</th>
-                      <th scope="col">Quantity</th>
-                      <th scope="col">Price</th>
-                      <th scope="col">Subtotal</th>
+                      <th scope="col">Sản phẩm</th>
+                      <th scope="col">Số lượng</th>
+                      <th scope="col">Giá</th>
+                      <th scope="col">Tổng</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -121,12 +143,8 @@
                       <td>$40.00</td>
                     </tr>
                     <tr>
-                      <td colspan="3" class="text-right">Discount</td>
-                      <td style="color: red">0%</td>
-                    </tr>
-                    <tr>
-                      <td colspan="3" class="text-right">Total</td>
-                      <td style="color: #0071f8">$96.00</td>
+                      <td colspan="3" class="text-right">Tổng cộng</td>
+                      <td>$96.00</td>
                     </tr>
                   </tbody>
                 </table>
@@ -135,64 +153,53 @@
           </div>
         </div>
         <div class="col-lg-4">
-          <div class="more-info">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-12">
-<!--                  <div class="tabs-content">-->
-                    <div class="row">
-                      <div class="col-lg-12">
-                        <div class="qr-code" id="qr-code">
-                          <img src="assets/images/qr-code.jpg" alt="QR Code">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                        <div class="tab-content" id="myTabContent">
-
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="order-summary">
+            <h4>Tóm tắt đơn hàng</h4>
+            <ul>
+              <li>
+                <span>Tổng phụ</span>
+                <span>$96.00</span>
+              </li>
+              <li>
+                <span>Vận chuyển</span>
+                <span>Miễn phí</span>
+              </li>
+              <li>
+                <span>Thuế (8%)</span>
+                <span>$7.68</span>
+              </li>
+              <li>
+                <span>Tổng cộng</span>
+                <span>$103.68</span>
+              </li>
+            </ul>
+            <button class="btn btn-primary" type="submit">Đặt hàng</button>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-<footer>
-  <div class="container">
-    <div class="col-lg-12">
-      <p>Copyright © 2048 LUGX Gaming Company. All rights reserved. &nbsp;&nbsp; <a rel="nofollow" href="https://templatemo.com" target="_blank">Design: TemplateMo</a></p>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Bản quyền &copy; 2048 Công ty LUGX Gaming. Tất cả các quyền được bảo lưu. &nbsp;&nbsp; <a rel="nofollow" href="https://templatemo.com" target="_blank">Thiết kế: TemplateMo</a></p>
+        </div>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<script>
-  document.getElementById("qr-code").addEventListener("click", function() {
-    Swal.fire({
-      icon: "success",
-      title: "Thanh toán thành công",
-      text: "Cảm ơn bạn đã mua hàng",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        window.location.href = "index.html";
-      }
-    });
-  });
-</script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
-<!-- Scripts -->
-<!-- Bootstrap core JavaScript -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/js/isotope.min.js"></script>
-<script src="assets/js/owl-carousel.js"></script>
-<script src="assets/js/counter.js"></script>
-<script src="assets/js/custom.js"></script>
+  <!-- Additional Scripts -->
+  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/owl.js"></script>
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/counter.js"></script>
 
 </body>
+
 </html>
