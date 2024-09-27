@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lugx Gaming - Login</title>
+    <title>Lugx Gaming - Register</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        /* Lugx Gaming Login Page Styles */
+        /* Lugx Gaming Register Page Styles */
         body {
             font-family: 'Roboto', sans-serif;
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
@@ -15,6 +15,8 @@
             margin: 0;
             padding: 0;
         }
+
+        
 
         .header-area {
             background-color: rgba(22, 33, 62, 0.8);
@@ -102,8 +104,6 @@
             margin: 0 auto;
         }
 
-        /* da sua */
-
         .form-control {
             width: 100%;
             padding: 15px;
@@ -139,6 +139,30 @@
             background-color: #45b393;
         }
 
+        /* Gaming-inspired decorative elements */
+        .container::before,
+        .container::after {
+            content: "";
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%234ecca3"><path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 9 19.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>');
+            background-repeat: no-repeat;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        .container::before {
+            top: 20px;
+            left: 20px;
+        }
+
+        .container::after {
+            bottom: 20px;
+            right: 20px;
+            transform: rotate(180deg);
+        }
+
         /* Responsive adjustments */
         @media (max-width: 768px) {
             .header-area {
@@ -164,30 +188,6 @@
                 padding: 20px;
             }
         }
-
-        /* Gaming-inspired decorative elements */
-        .container::before,
-        .container::after {
-            content: "";
-            position: fixed;
-            width: 50px;
-            height: 50px;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%234ecca3"><path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 9 19.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>');
-            background-repeat: no-repeat;
-            opacity: 0.1;
-            z-index: -1;
-        }
-
-        .container::before {
-            top: 20px;
-            left: 20px;
-        }
-
-        .container::after {
-            bottom: 20px;
-            right: 20px;
-            transform: rotate(180deg);
-        }
     </style>
 </head>
 <body>
@@ -196,12 +196,13 @@
             <div class="row">
                 <div class="col-12">
                     <nav class="main-nav">
-                        <a href="index.html" class="logo">LuGx Gaming</a>
+                        <a href="index.html" class="logo">LUGX GAMING</a>
                         <ul class="nav">
-                            <li><a href="index.html">Trang Chủ</a></li>
+                            <li><a href="index.html">Trang chủ</a></li>
                             <li><a href="shop.html">Cửa hàng</a></li>
                             <li><a href="contact.html">Liên hệ</a></li>
-                            <li><a href="login.html" class="active">Đăng nhập</a></li>
+                            <li><a href="login.html">Đăng nhập</a></li>
+                            <li><a href="register.html" class="active">Đăng kí</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -214,20 +215,26 @@
             <div class="col-12">
                 <div class="section-heading">
                     <div class="line-dec"></div>
-                    <h1>Đăng nhập</h1>
+                    <h1>Đăng kí</h1>
                 </div>
             </div>
             <div class="col-12">
                 <form action="#" method="post">
                     <div class="row">
                         <div class="col-12">
-                            <input type="text" name="username" class="form-control" placeholder="tài khoản của bạn..." required>
+                            <input type="text" name="username" class="form-control" placeholder="Tài khoản của bạn" required>
                         </div>
                         <div class="col-12">
-                            <input type="password" name="password" class="form-control" placeholder="mật khẩu" required>
+                            <input type="password" name="password" class="form-control" placeholder="Mật khẩu" required>
                         </div>
                         <div class="col-12">
-                            <button type="submit" class="main-button">Đăng nhập</button>
+                            <input type="password" name="repassword" class="form-control" placeholder="Nhập lại mật khẩu" required>
+                        </div>
+                        <div class="col-12">
+                            <input type="tel" name="phone" class="form-control" placeholder="Số điện thoại" required>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="main-button">Đăng kí</button>
                         </div>
                     </div>
                 </form>
