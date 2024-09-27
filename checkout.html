@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <title>Lugx Gaming - Checkout</title>
+  <title>Lugx Gaming - Thanh toán</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
 
   <!-- Additional CSS Files -->
   <link rel="stylesheet" href="assets/css/fontawesome.css">
@@ -30,24 +28,23 @@
         <div class="col-12">
           <nav class="navbar navbar-expand-lg">
             <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="Lugx Gaming"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#lugxgame-navbar"
-              aria-controls="lugxgame-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#lugxgame-navbar" aria-controls="lugxgame-navbar" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="lugxgame-navbar">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                  <a href="index.html" class="nav-link">Home</a>
+                  <a href="index.html" class="nav-link">Trang chủ</a>
                 </li>
                 <li class="nav-item">
-                  <a href="shop.html" class="nav-link">Shop</a>
+                  <a href="shop.html" class="nav-link">Cửa hàng</a>
                 </li>
                 <li class="nav-item active">
-                  <a href="checkout.html" class="nav-link">Checkout</a>
+                  <a href="checkout.html" class="nav-link">Thanh toán</a>
                 </li>
                 <li class="nav-item">
-                  <a href="contact.html" class="nav-link">Contact</a>
+                  <a href="contact.html" class="nav-link">Liên hệ</a>
                 </li>
               </ul>
             </div>
@@ -61,7 +58,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h2 class="page-title">Checkout</h2>
+          <h2 class="page-title">Thanh toán</h2>
         </div>
       </div>
       <div class="row">
@@ -69,70 +66,63 @@
           <div class="checkout-form">
             <div class="row">
               <div class="col-lg-6">
-                <h4>Billing Details</h4>
+                <h4>Chi tiết thanh toán</h4>
                 <form action="#">
                   <div class="form-group">
-                    <label for="first-name">First Name *</label>
-                    <input type="text" class="form-control" id="first-name" aria-describedby="first-name"
-                      placeholder="Enter your first name">
+                    <label for="first-name">Tên *</label>
+                    <input type="text" class="form-control" id="first-name" aria-describedby="first-name" placeholder="Nhập tên của bạn">
                   </div>
                   <div class="form-group">
-                    <label for="last-name">Last Name *</label>
-                    <input type="text" class="form-control" id="last-name" aria-describedby="last-name"
-                      placeholder="Enter your last name">
+                    <label for="last-name">Họ *</label>
+                    <input type="text" class="form-control" id="last-name" aria-describedby="last-name" placeholder="Nhập họ của bạn">
                   </div>
                   <div class="form-group">
-                    <label for="email">Email Address *</label>
-                    <input type="email" class="form-control" id="email" aria-describedby="email"
-                      placeholder="Enter your email address">
+                    <label for="email">Địa chỉ email *</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Nhập địa chỉ email của bạn">
                   </div>
                   <div class="form-group">
-                    <label for="phone">Phone Number *</label>
-                    <input type="text" class="form-control" id="phone" aria-describedby="phone"
-                      placeholder="Enter your phone number">
+                    <label for="phone">Số điện thoại *</label>
+                    <input type="text" class="form-control" id="phone" aria-describedby="phone" placeholder="Nhập số điện thoại của bạn">
                   </div>
                 </form>
               </div>
               <div class="col-lg-6">
-                <h4>Payment Method</h4>
+                <h4>Phương thức thanh toán</h4>
                 <form action="#">
                   <div class="form-group">
-                    <label for="payment-method">Payment Method</label>
+                    <label for="payment-method">Phương thức thanh toán</label>
                     <select class="form-control" id="payment-method">
-                      <option value="">Select Payment Method</option>
+                      <option value="">Chọn phương thức thanh toán</option>
                       <option value="paypal">Paypal</option>
                       <option value="visa">Visa</option>
                       <option value="mastercard">Mastercard</option>
                     </select>
                   </div>
                   <div class="form-group">
-                    <label for="card-number">Card Number</label>
-                    <input type="text" class="form-control" id="card-number" aria-describedby="card-number"
-                      placeholder="Enter your card number">
+                    <label for="card-number">Số thẻ</label>
+                    <input type="text" class="form-control" id="card-number" aria-describedby="card-number" placeholder="Nhập số thẻ của bạn">
                   </div>
                   <div class="form-group">
-                    <label for="card-expire">Card Expiration</label>
-                    <input type="text" class="form-control" id="card-expire" aria-describedby="card-expire"
-                      placeholder="MM/YY">
+                    <label for="card-expire">Ngày hết hạn thẻ</label>
+                    <input type="text" class="form-control" id="card-expire" aria-describedby="card-expire" placeholder="MM/YY">
                   </div>
                   <div class="form-group">
-                    <label for="card-cvc">Card CVC</label>
-                    <input type="text" class="form-control" id="card-cvc" aria-describedby="card-cvc"
-                      placeholder="Enter your card CVC">
+                    <label for="card-cvc">Mã CVC</label>
+                    <input type="text" class="form-control" id="card-cvc" aria-describedby="card-cvc" placeholder="Nhập mã CVC">
                   </div>
                 </form>
               </div>
             </div>
             <div class="row">
               <div class="col-12">
-                <h4 class="mt-4">Order Summary</h4>
+                <h4 class="mt-4">Tóm tắt đơn hàng</h4>
                 <table class="table table-bordered">
                   <thead>
                     <tr>
-                      <th scope="col">Product</th>
-                      <th scope="col">Quantity</th>
-                      <th scope="col">Price</th>
-                      <th scope="col">Subtotal</th>
+                      <th scope="col">Sản phẩm</th>
+                      <th scope="col">Số lượng</th>
+                      <th scope="col">Giá</th>
+                      <th scope="col">Tổng</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -153,7 +143,7 @@
                       <td>$40.00</td>
                     </tr>
                     <tr>
-                      <td colspan="3" class="text-right">Total</td>
+                      <td colspan="3" class="text-right">Tổng cộng</td>
                       <td>$96.00</td>
                     </tr>
                   </tbody>
@@ -164,26 +154,26 @@
         </div>
         <div class="col-lg-4">
           <div class="order-summary">
-            <h4>Order Summary</h4>
+            <h4>Tóm tắt đơn hàng</h4>
             <ul>
               <li>
-                <span>Subtotal</span>
+                <span>Tổng phụ</span>
                 <span>$96.00</span>
               </li>
               <li>
-                <span>Shipping</span>
-                <span>Free</span>
+                <span>Vận chuyển</span>
+                <span>Miễn phí</span>
               </li>
               <li>
-                <span>Tax (8%)</span>
+                <span>Thuế (8%)</span>
                 <span>$7.68</span>
               </li>
               <li>
-                <span>Total</span>
+                <span>Tổng cộng</span>
                 <span>$103.68</span>
               </li>
             </ul>
-            <button class="btn btn-primary" type="submit">Place Order</button>
+            <button class="btn btn-primary" type="submit">Đặt hàng</button>
           </div>
         </div>
       </div>
@@ -194,8 +184,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <p>Copyright &copy; 2048 LUGX Gaming Company. All rights reserved. &nbsp;&nbsp; <a rel="nofollow"
-              href="https://templatemo.com" target="_blank">Design: TemplateMo</a></p>
+          <p>Bản quyền &copy; 2048 Công ty LUGX Gaming. Tất cả các quyền được bảo lưu. &nbsp;&nbsp; <a rel="nofollow" href="https://templatemo.com" target="_blank">Thiết kế: TemplateMo</a></p>
         </div>
       </div>
     </div>
